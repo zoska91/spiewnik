@@ -1,0 +1,26 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  background: url('../images/bg-old-book.jpg') no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+}
+
+.logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
