@@ -3,12 +3,6 @@ body {
   margin: 0;
 }
 
-.wrapper {
-  background: url('../images/bg-old-book.jpg') no-repeat center;
-  background-size: cover;
-  height: 100vh;
-}
-
 .logo {
   position: absolute;
   top: 50%;

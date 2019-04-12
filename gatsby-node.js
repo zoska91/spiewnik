@@ -1,7 +1,52 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require("path")
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const songTemplate = path.resolve(`src/Templates/songTemplate.js`)
+  const songsQuery = await graphql(`
+    {
+      spiewnik {
+        songs: songsConnection(first: 1000) {
+          edges {
+            node {
+              status
+              updatedAt
+              createdAt
+              id
+              title
+              text
+              tabs
+              artists {
+                id
+              }
+              slug
+              foto {
+                status
+                updatedAt
+                createdAt
+                id
+                handle
+                fileName
+                height
+                width
+                size
+                mimeType
+              }
+              chords
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  songsQuery.data.spiewnik.songs.edges.forEach(song => {
+    createPage({
+      path: song.node.slug,
+      component: songTemplate,
+      context: {
+        data: song.node,
+      },
+    })
+  })
+}

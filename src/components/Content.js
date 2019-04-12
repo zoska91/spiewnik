@@ -1,8 +1,7 @@
 import React from "react"
-import "../fonts/Altgotisch.ttf"
 
 const Content = () => {
-  return <div>content</div>
+  return <div>okokokok</div>
 }
 
 export default Content
