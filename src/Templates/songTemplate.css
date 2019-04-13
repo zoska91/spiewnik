@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "resphekt";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Resphekt-Regular.otf")
+}
+
+@font-face {
+  font-family: "Dontmix";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/dontmix.ttf")
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper-song {
+  background: url('../images/bg-light.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  padding: 0 5vw;
+  overflow: hidden;
+}
+
+.title {
+  font-family: resphekt;
+  font-size: 3rem;
+  font-weight: lighter;
+  margin: 0 0 3vh
+}
+
+.text {
+  font-family: Dontmix;
+  width: 70%;
+  font-size: 1.2rem;
+  line-height: 1
+}
+
+.chords {
+  position: fixed;
+  top: 20vh;
+  font-family: Dontmix;
+  left: 75%;
+  font-weight: bold;
+}
+
+.back {
+  position: fixed;
+  top: 90vh;
+  left: 90vw
+}

@@ -1,3 +1,113 @@
+@-webkit-keyframes fall {
+
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0);
+    transform: translate(0, 0) rotate(0)
+  }
+
+  18% {
+    -webkit-transform: translate(0, 0) rotate(0);
+    transform: translate(0, 0) rotate(0)
+  }
+
+  30% {
+    -webkit-transform: translate(0, 30%) rotate(15deg);
+    transform: translate(0, 30%) rotate(15deg)
+  }
+
+  34% {
+    -webkit-transform: translate(0, 36%) rotate(15deg);
+    transform: translate(0, 36%) rotate(15deg)
+  }
+
+  38% {
+    -webkit-transform: translate(0, 30%) rotate(15deg);
+    transform: translate(0, 30%) rotate(15deg)
+  }
+
+  42% {
+    -webkit-transform: translate(0, 32%) rotate(15deg);
+    transform: translate(0, 32%) rotate(15deg)
+  }
+
+  70% {
+    -webkit-transform: translate(0, 120%) rotate(23deg);
+    transform: translate(0, 120%) rotate(23deg);
+    opacity: 1;
+  }
+
+  75% {
+    -webkit-transform: translate(0, 120%) rotate(23deg);
+    transform: translate(0, 120%) rotate(23deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate(0, 200%) rotate(30de);
+    transform: translate(0, 200%) rotate(30de);
+    opacity: 0
+  }
+}
+
+
+@keyframes fall {
+
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0);
+    transform: translate(0, 0) rotate(0)
+  }
+
+  18% {
+    -webkit-transform: translate(0, 0) rotate(0);
+    transform: translate(0, 0) rotate(0)
+  }
+
+  30% {
+    -webkit-transform: translate(0, 30%) rotate(15deg);
+    transform: translate(0, 30%) rotate(15deg)
+  }
+
+  34% {
+    -webkit-transform: translate(0, 36%) rotate(15deg);
+    transform: translate(0, 36%) rotate(15deg)
+  }
+
+  38% {
+    -webkit-transform: translate(0, 30%) rotate(15deg);
+    transform: translate(0, 30%) rotate(15deg)
+  }
+
+  42% {
+    -webkit-transform: translate(0, 32%) rotate(15deg);
+    transform: translate(0, 32%) rotate(15deg)
+  }
+
+  70% {
+    -webkit-transform: translate(0, 200%) rotate(23deg);
+    transform: translate(0, 120%) rotate(23deg);
+    top: 0;
+  }
+
+  75% {
+    -webkit-transform: translate(0, 200%) rotate(23deg);
+    transform: translate(0, 120%) rotate(23deg);
+    top: 150%
+  }
+
+  100% {
+    -webkit-transform: translate(0, 200%) rotate(30de);
+    transform: translate(0, 200%) rotate(30de);
+    top: 150%;
+  }
+}
+
+@font-face {
+  font-family: "CAT Altgotisch";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Altgotisch.ttf")
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -7,6 +117,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   height: 80vh;
 }
@@ -15,10 +126,87 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   height: 100%;
 }
 
 .start {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(0, 0, );
+  transform: translate(0, 0, );
+  background: url('../images/bg.jpeg') no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
   z-index: 999;
+  -webkit-box-shadow: 5px 5px 10px 10px black;
+  box-shadow: 5px 5px 10px 10px black;
+  -webkit-animation: fall 3s;
+  animation: fall 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url('../images/bg.jpeg') no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+  font-family: "CAT Altgotisch";
+}
+
+h2 {
+  font-family: "CAT Altgotisch";
+  font-size: 85px;
+  color: #634B29;
+  font-weight: lighter;
+  padding: 0;
+  margin: 4vh 0 2vh
+}
+
+.search {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search img {
+  height: 100%;
+  transform: rotate(70deg);
+  margin-right: 20px;
+}
+
+.search input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #634B29;
+  border-left: 2px solid #634B29;
+  border-right: 2px solid #634B29;
+  font-family: "CAT Altgotisch";
+  width: 50%;
+  padding: 3px 10px;
+  font-size: 20px;
+}
+
+.index {
+  list-style: none;
+  text-align: left;
+  padding: 0 20vw;
+}
+
+.index a {
+  color: #634B29;
+  text-decoration: none;
+  font-size: 30px;
 }

@@ -1,8 +1,8 @@
 import React from "react"
-import Img from "../images/S.png"
+import logo from "../images/S.png"
+import Search from "../images/lupa.png"
 import { Link, graphql } from "gatsby"
 import "./index.css"
-import "./BackGround.css"
 
 const IndexPage = ({
   data: {
@@ -10,20 +10,27 @@ const IndexPage = ({
   },
 }) => (
   <>
-    {/* <div className="wrapper start">
+    <div className="start">
       <div className="logo">
-        <img src={Img} alt="S" />
+        <img src={logo} alt="" />
       </div>
-    </div> */}
+    </div>
 
     <div className="wrapper">
-      <h2>Spis treści</h2>
+      <h2>Spis tresci</h2>
+      <div className="search">
+        <img src={Search} alt="search" />
+        <input type="text" />
+      </div>
+
       {edges.map(page => (
-        <p>
-          <Link key={page.node.path} to={page.node.path}>
-            {page.node.context.data.title}
-          </Link>
-        </p>
+        <ul className="index">
+          <li>
+            <Link key={page.node.path} to={page.node.path}>
+              {page.node.context.data.title}
+            </Link>
+          </li>
+        </ul>
       ))}
     </div>
   </>
