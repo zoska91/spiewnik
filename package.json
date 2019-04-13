@@ -13,8 +13,9 @@
     "gatsby-plugin-react-helmet": "^3.0.11",
     "gatsby-plugin-sharp": "^2.0.32",
     "gatsby-plugin-styled-components": "^3.0.7",
-    "gatsby-source-filesystem": "^2.0.28",
-    "gatsby-source-graphql": "^2.0.17",
+    "gatsby-source-filesystem": "^2.0.29",
+    "gatsby-source-graphql": "^2.0.18",
+    "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.1.17",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -25,6 +26,7 @@
     "vscode-css-languageservice": "^3.0.13"
   },
   "devDependencies": {
+    "graphql-markdown": "^5.0.1",
     "prettier": "^1.16.4"
   },
   "keywords": [

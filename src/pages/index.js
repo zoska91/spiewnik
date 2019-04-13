@@ -2,6 +2,7 @@ import React from "react"
 import Img from "../images/S.png"
 import { Link, graphql } from "gatsby"
 import "./index.css"
+import "./BackGround.css"
 
 const IndexPage = ({
   data: {
@@ -9,17 +10,22 @@ const IndexPage = ({
   },
 }) => (
   <>
-    <div className="logo">
-      <img src={Img} alt="S" />
+    {/* <div className="wrapper start">
+      <div className="logo">
+        <img src={Img} alt="S" />
+      </div>
+    </div> */}
+
+    <div className="wrapper">
+      <h2>Spis treści</h2>
+      {edges.map(page => (
+        <p>
+          <Link key={page.node.path} to={page.node.path}>
+            {page.node.context.data.title}
+          </Link>
+        </p>
+      ))}
     </div>
-    {edges.map(page => (
-      <p>
-        <Link key={page.node.path} to={page.node.path}>
-          {page.node.context.data.title}
-        </Link>
-      </p>
-    ))}
-    <div />
   </>
 )
 
