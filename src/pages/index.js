@@ -1,29 +1,46 @@
-import React from "react"
+import React, { Component } from "react"
 import logo from "../images/S.png"
 import Search from "../images/lupa.png"
 import { Link, graphql } from "gatsby"
 import "./index.css"
 
-const IndexPage = ({
-  data: {
-    allSitePage: { edges },
-  },
-}) => (
-  <>
-    <div className="start">
-      <div className="logo">
-        <img src={logo} alt="" />
-      </div>
-    </div>
+class IndexPage extends Component {
+  state = {
+    data: this.props.data.allSitePage,
+    result: [],
+    value: "",
+  }
 
-    <div className="wrapper">
-      <h2>Spis tresci</h2>
-      <div className="search">
-        <input type="text" />
-        <img src={Search} alt="search" />
-      </div>
+  handleChangeValue = e => {
+    const value = e.target.value
+    this.setState({
+      value,
+    })
+  }
 
-      {edges.map(page => (
+  handleSearch = e => {
+    e.preventDefault()
+
+    let value = this.state.value.toUpperCase()
+
+    const songList = this.state.data.edges.map(page => ({
+      title: page.node.context.data.title.toUpperCase(),
+      path: page.node.path,
+    }))
+
+    let list = songList.filter(page => page.title.includes(value))
+
+    this.setState({
+      result: list,
+    })
+  }
+
+  render() {
+    const count = this.state.result.length
+    let list = []
+
+    if (count === 0) {
+      list = this.state.data.edges.map(page => (
         <ul className="index">
           <li>
             <Link key={page.node.path} to={page.node.path}>
@@ -31,10 +48,45 @@ const IndexPage = ({
             </Link>
           </li>
         </ul>
-      ))}
-    </div>
-  </>
-)
+      ))
+    } else {
+      list = this.state.result.map(title => (
+        <ul className="index">
+          <li>
+            <Link key={title.path} to={title.path}>
+              {title.title.toLowerCase()}
+            </Link>
+          </li>
+        </ul>
+      ))
+    }
+
+    return (
+      <>
+        <div className="start">
+          <div className="logo">
+            <img src={logo} alt="" />
+          </div>
+        </div>
+
+        <div className="wrapper" onChange={this.handleSearch}>
+          <h2>Spis tresci</h2>
+          <form className="search">
+            <input
+              type="text"
+              id="value"
+              value={this.state.value}
+              onChange={this.handleChangeValue}
+            />
+            <img src={Search} alt="search" />
+          </form>
+
+          {list}
+        </div>
+      </>
+    )
+  }
+}
 
 export const allSongPagesQuery = graphql`
   {

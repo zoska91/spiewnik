@@ -170,6 +170,7 @@ body {
   width: 100vw;
   text-align: center;
   font-family: "resphekt";
+  text-transform: capitalize;
 }
 
 h2 {
