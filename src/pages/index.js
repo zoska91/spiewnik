@@ -19,8 +19,8 @@ const IndexPage = ({
     <div className="wrapper">
       <h2>Spis tresci</h2>
       <div className="search">
-        <img src={Search} alt="search" />
         <input type="text" />
+        <img src={Search} alt="search" />
       </div>
 
       {edges.map(page => (

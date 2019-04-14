@@ -14,22 +14,12 @@ exports.createPages = async ({ graphql, actions }) => {
               title
               text
               tabs
-              artist {
+              artists {
                 id
+                name
               }
+              artist
               slug
-              foto {
-                status
-                updatedAt
-                createdAt
-                id
-                handle
-                fileName
-                height
-                width
-                size
-                mimeType
-              }
               chords
             }
           }

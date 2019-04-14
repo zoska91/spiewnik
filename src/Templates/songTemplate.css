@@ -12,9 +12,10 @@
   src: url("../fonts/dontmix.ttf")
 }
 
-body {
+* {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .wrapper-song {
@@ -26,30 +27,57 @@ body {
   overflow: hidden;
 }
 
+.artist {
+  font-family: resphekt;
+  font-size: 1.5em;
+  text-align: right;
+  margin: 2vh 0 0;
+}
+
 .title {
   font-family: resphekt;
   font-size: 3rem;
   font-weight: lighter;
-  margin: 0 0 3vh
+  margin: 0 0 3vh;
+  text-align: center;
+}
+
+.tabs {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .tabs {
+    display: block;
+    font-size: .7rem;
+    font-family: monospace;
+    width: 100%;
+  }
 }
 
 .text {
   font-family: Dontmix;
   width: 70%;
   font-size: 1.2rem;
-  line-height: 1
+  line-height: 1.3;
+  margin-bottom: 5vh;
 }
 
 .chords {
   position: fixed;
-  top: 20vh;
+  top: 30vh;
   font-family: Dontmix;
-  left: 75%;
+  right: 5%;
   font-weight: bold;
 }
 
 .back {
   position: fixed;
-  top: 90vh;
-  left: 90vw
+  bottom: 5vw;
+  right: 5vw;
+  height: 7vh;
+}
+
+.back img {
+  height: 100%;
 }

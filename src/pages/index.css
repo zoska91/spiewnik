@@ -108,6 +108,13 @@
   src: url("../fonts/Altgotisch.ttf")
 }
 
+@font-face {
+  font-family: "resphekt";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Resphekt-Regular.otf")
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -162,7 +169,7 @@ body {
   min-height: 100vh;
   width: 100vw;
   text-align: center;
-  font-family: "CAT Altgotisch";
+  font-family: "resphekt";
 }
 
 h2 {
@@ -183,8 +190,7 @@ h2 {
 
 .search img {
   height: 100%;
-  transform: rotate(70deg);
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .search input {
@@ -193,10 +199,10 @@ h2 {
   border-bottom: 2px solid #634B29;
   border-left: 2px solid #634B29;
   border-right: 2px solid #634B29;
-  font-family: "CAT Altgotisch";
+  font-family: "resphekt";
   width: 50%;
   padding: 3px 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .index {
