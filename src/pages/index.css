@@ -1,4 +1,4 @@
-@-webkit-keyframes fall {
+/* @-webkit-keyframes fall {
 
   0% {
     -webkit-transform: translate(0, 0) rotate(0);
@@ -99,7 +99,7 @@
     transform: translate(0, 200%) rotate(30de);
     top: 150%;
   }
-}
+} */
 
 @font-face {
   font-family: "CAT Altgotisch";
@@ -120,6 +120,7 @@ body {
   margin: 0;
 }
 
+/*
 .logo {
   position: absolute;
   top: 50%;
@@ -138,7 +139,8 @@ body {
   height: 100%;
 }
 
-.start {
+*/
+/* .start {
 
   position: fixed;
   top: 0;
@@ -147,7 +149,7 @@ body {
   transform: translate(0, 0, );
   background: url('../images/bg.jpeg') no-repeat center;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   z-index: 999;
   -webkit-box-shadow: 5px 5px 10px 10px black;
@@ -156,14 +158,11 @@ body {
   animation: fall 3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-}
+} */
 
 
 
 .wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
   background: url('../images/bg.jpeg') no-repeat center;
   background-size: cover;
   min-height: 100vh;
@@ -178,8 +177,7 @@ h2 {
   font-size: 85px;
   color: #634B29;
   font-weight: lighter;
-  padding: 0;
-  margin: 4vh 0 2vh
+  padding: 4vh 0 2vh
 }
 
 .search {

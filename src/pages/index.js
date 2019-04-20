@@ -63,11 +63,11 @@ class IndexPage extends Component {
 
     return (
       <>
-        <div className="start">
+        {/* <div className="start">
           <div className="logo">
             <img src={logo} alt="" />
           </div>
-        </div>
+        </div> */}
 
         <div className="wrapper" onChange={this.handleSearch}>
           <h2>Spis tresci</h2>
