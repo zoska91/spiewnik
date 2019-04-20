@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import logo from "../images/S.png"
 import Search from "../images/lupa.png"
 import { Link, graphql } from "gatsby"
 import "./index.css"
@@ -41,34 +40,24 @@ class IndexPage extends Component {
 
     if (count === 0) {
       list = this.state.data.edges.map(page => (
-        <ul className="index">
-          <li>
-            <Link key={page.node.path} to={page.node.path}>
-              {page.node.context.data.title}
-            </Link>
-          </li>
-        </ul>
+        <li>
+          <Link key={page.node.path} to={page.node.path}>
+            {page.node.context.data.title}
+          </Link>
+        </li>
       ))
     } else {
       list = this.state.result.map(title => (
-        <ul className="index">
-          <li>
-            <Link key={title.path} to={title.path}>
-              {title.title.toLowerCase()}
-            </Link>
-          </li>
-        </ul>
+        <li>
+          <Link key={title.path} to={title.path}>
+            {title.title.toLowerCase()}
+          </Link>
+        </li>
       ))
     }
 
     return (
       <>
-        {/* <div className="start">
-          <div className="logo">
-            <img src={logo} alt="" />
-          </div>
-        </div> */}
-
         <div className="wrapper" onChange={this.handleSearch}>
           <h2>Spis tresci</h2>
           <form className="search">
@@ -80,8 +69,7 @@ class IndexPage extends Component {
             />
             <img src={Search} alt="search" />
           </form>
-
-          {list}
+          <ul className="index">{list}</ul>
         </div>
       </>
     )

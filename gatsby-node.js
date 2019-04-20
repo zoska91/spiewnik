@@ -21,6 +21,9 @@ exports.createPages = async ({ graphql, actions }) => {
               artist
               slug
               chords
+              aa {
+                html
+              }
             }
           }
         }
