@@ -9,3 +9,8 @@ Used react, RWD, simple CSS.
 You can see it here: [spiewnik](http://spiewnik.zofiajanas.pl/)
 
 ![logo](https://github.com/zoska91/spiewnik/blob/master/src/images/S.png "logo")
+
+### what i what to add:
+
+- autoscrool button
+- search artist
