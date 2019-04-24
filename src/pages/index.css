@@ -12,6 +12,8 @@
   src: url("../fonts/Resphekt-Regular.otf")
 }
 
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+
 body {
   padding: 0;
   margin: 0;
@@ -22,7 +24,7 @@ html {
 }
 
 .wrapper {
-  background: url('../images/bg.jpeg') no-repeat center;
+  background: url('../images/bg-cegly.jpg') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
@@ -32,10 +34,20 @@ html {
   text-transform: capitalize;
 }
 
+/* .wrapper::before {
+  content: "";
+  position: fixed;
+  z-index: 1;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, .2);
+} */
+
 h2 {
-  font-family: "CAT Altgotisch";
+  font-family: 'Fredericka the Great', cursive;
   font-size: 4.5rem;
-  color: #634B29;
+  color: white;
   font-weight: lighter;
   padding: 4vh 0 2vh
 }
@@ -55,13 +67,14 @@ h2 {
 .search input {
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #634B29;
-  border-left: 2px solid #634B29;
-  border-right: 2px solid #634B29;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
   font-family: "resphekt";
   width: 50%;
   padding: 3px 10px;
   font-size: 1.4rem;
+  color: white;
 }
 
 .index {
@@ -71,7 +84,7 @@ h2 {
 }
 
 .index a {
-  color: #634B29;
+  color: white;
   text-decoration: none;
   font-size: 1.9rem;
 }
@@ -142,11 +155,11 @@ h2 {
   }
 
   .index::-webkit-scrollbar-button {
-    background-color: hsl(35, 41%, 27%, 0.5);
+    background-color: rgba(4, 5, 65, 0.5);
   }
 
   .index::-webkit-scrollbar-thumb {
-    background-color: hsl(35, 41%, 27%, 0.4);
+    background-color: rgba(2, 0, 34, 0.712);
     opacity: .3;
   }
 

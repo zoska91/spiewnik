@@ -12,7 +12,6 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               id
               title
-              text
               tabs
               artists {
                 id

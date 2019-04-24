@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Search from "../images/lupa.png"
+import Search from "../images/search.png"
 import { Link, graphql } from "gatsby"
 import "./index.css"
 
