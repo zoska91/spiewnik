@@ -27,7 +27,7 @@ html {
   background-attachment: fixed;
   width: 100vw;
   padding: 0 5vw;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: rgb(253, 251, 246);
 }
 
