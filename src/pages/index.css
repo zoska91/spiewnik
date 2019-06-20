@@ -2,17 +2,17 @@
   font-family: "CAT Altgotisch";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Altgotisch.ttf")
+  src: url("../fonts/Altgotisch.ttf");
 }
 
 @font-face {
   font-family: "resphekt";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Resphekt-Regular.otf")
+  src: url("../fonts/Resphekt-Regular.otf");
 }
 
-@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great");
 
 body {
   padding: 0;
@@ -24,7 +24,7 @@ html {
 }
 
 .wrapper {
-  background: url('../images/bg-cegly.jpg') no-repeat center;
+  background: url("../images/bg-cegly.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
@@ -45,11 +45,11 @@ html {
 } */
 
 h2 {
-  font-family: 'Fredericka the Great', cursive;
+  font-family: "Fredericka the Great", cursive;
   font-size: 4.5rem;
   color: white;
   font-weight: lighter;
-  padding: 4vh 0 2vh
+  padding: 4vh 0 2vh;
 }
 
 .search {
@@ -89,37 +89,36 @@ h2 {
   font-size: 1.9rem;
 }
 
-@media(min-height: 731px) {
+@media (min-height: 731px) {
   html {
     font-size: 20px;
   }
 }
 
-@media(min-height: 823px) {
+@media (min-height: 823px) {
   html {
     font-size: 22px;
   }
 }
 
-@media(min-height: 996px) {
+@media (min-height: 996px) {
   html {
     font-size: 28px;
   }
 }
 
-@media(min-height: 1366px) {
+@media (min-height: 1366px) {
   html {
     font-size: 36px;
   }
 }
 
 @media (orientation: landscape) {
-
   .wrapper {
     display: grid;
     grid-template-areas:
       "header index"
-      "search index"
+      "search index";
   }
 
   h2 {
@@ -159,14 +158,13 @@ h2 {
   }
 
   .index::-webkit-scrollbar-thumb {
-    background-color: rgba(2, 0, 34, 0.712);
-    opacity: .3;
+    background-color: rgba(158, 194, 248, 0.3);
+    opacity: 0.3;
   }
 
   .index li {
     display: block;
   }
-
 }
 
 @media (orientation: landscape) and (min-width: 823px) {

@@ -10,12 +10,11 @@ const SongTemplate = ({ pageContext: { data } }) => (
     <Link to="/" className="back">
       <img src={Back} alt="wstecz" />
     </Link>
-    <h2 className="artist">{data.artist}</h2>
+    <h2 className="artist">{data.artists.artsitName}</h2>
     <h1 className="title">{data.title}</h1>
     <ReactMarkdown source={data.tabs} className="tabs" />
     <ReactMarkdown source={data.chords} className="chords" />
-    <div className="text">{ReactHtmlParser(data.aa.html)}</div>
-    {console.log(data.artists.name)}
+    <div className="text">{ReactHtmlParser(data.text.html)}</div>
   </div>
 )
 

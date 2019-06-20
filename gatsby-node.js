@@ -10,19 +10,22 @@ exports.createPages = async ({ graphql, actions }) => {
         songs: songsConnection(first: 1000) {
           edges {
             node {
+              status
+              updatedAt
+              createdAt
               id
               title
-              tabs
               artists {
+                artsitName
                 id
-                name
               }
-              artist
               slug
-              chords
-              aa {
+              artist
+              tabs
+              text {
                 html
               }
+              chords
             }
           }
         }
